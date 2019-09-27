@@ -1,4 +1,4 @@
-#Importing Resources
+# Importing Resources
 Create resources outside of Terraform: https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough
 
 ```shell script
@@ -16,7 +16,7 @@ $ terraform import azurerm_resource_group.rg /subscriptions/00000000-0000-0000-0
 $ terraform plan
 ```
 Aha! Not creating the resource group...just the vnet.
-###Additional resources
+### Additional resources
 [Terraform Import Docs](https://www.terraform.io/docs/import/index.html)  
 [azurerm_resource_group](https://www.terraform.io/docs/providers/azurerm/r/resource_group.html)
 [azurerm_resource_group](https://www.terraform.io/docs/providers/azurerm/r/resource_group.html)    

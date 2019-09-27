@@ -1,40 +1,40 @@
-#Basics
-##A simple Terraform file
+# Basics
+## A simple Terraform file
 Examine [main.tf](main.tf)  
-##Exploring the CLI
+## Exploring the CLI
 ```shell script
 $ terraform -help
 $ terraform init -help
 ```
-##Initialize providers
+## Initialize providers
 ```sh
 $ terraform init
 ```
-##What's the plan?
+## What's the plan?
 ```sh
 $ terraform plan
 ```
-##Authenticate with Azure
+## Authenticate with Azure
 ```bash
 $ az login
 ```
-##Check again
+## Check again
 ```sh
 $ terraform plan
 ```
-##Let's do it
+## Let's do it
 ```sh
 $ terraform apply
 ```
-##Make a change
+## Make a change
 Change resource gorup in [main.tf](main.tf)  
 ```sh
 $ terraform plan
 $ terraform apply
 ```
-##Cleanup
+## Cleanup
 ```sh
 $ terraform destroy
 ```
-###Additional References
+### Additional References
 [Terraform.io Provider Reference](https://www.terraform.io/docs/providers/index.html)
