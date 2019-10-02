@@ -1,4 +1,4 @@
-# Basics
+# Module 4.1 - Basics
 ## A simple Terraform file
 Examine [main.tf](main.tf)  
 ## Exploring the CLI
