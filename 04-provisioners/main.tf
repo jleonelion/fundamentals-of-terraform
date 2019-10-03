@@ -34,9 +34,9 @@ resource "azurerm_network_security_group" "nsg" {
     priority                   = 1002
     direction                  = "Inbound"
     access                     = "Allow"
-    protocol                   = "Tcp"
+    protocol                   = var.webserver.protocol
     source_port_range          = "*"
-    destination_port_range     = var.port
+    destination_port_range     = var.webserver.port
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
@@ -128,7 +128,7 @@ resource "azurerm_virtual_machine" "vm" {
   provisioner "remote-exec" {
     inline = [
       "chmod +x /tmp/setup.sh",
-      "/tmp/setup.sh --port ${var.port} --dns_name ${azurerm_public_ip.pip.fqdn}",
+      "/tmp/setup.sh --port ${var.webserver.port} --dns_name ${azurerm_public_ip.pip.fqdn}",
     ]
   }
 }

@@ -1,7 +1,13 @@
-variable "port" {
-  description = "Port to listent to http on"
-  type = number
-  default = 80
+variable "webserver" {
+  description = "Setup to listent to http on"
+  type = object({
+    port     = number
+    protocol = string
+  })
+  default = {
+    port     = 80
+    protocol = "Tcp"
+  }
 }
 
 variable "location" {
