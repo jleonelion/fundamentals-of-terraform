@@ -1,6 +1,10 @@
 # Module 4.1 - Basics
 ## A simple Terraform file
 Examine [main.tf](main.tf)  
+
+### Additional References
+[Terraform.io Provider Reference](https://www.terraform.io/docs/providers/index.html)
+
 ## Exploring the CLI
 ```shell script
 $ terraform -help
@@ -36,5 +40,3 @@ $ terraform apply
 ```sh
 $ terraform destroy
 ```
-### Additional References
-[Terraform.io Provider Reference](https://www.terraform.io/docs/providers/index.html)
