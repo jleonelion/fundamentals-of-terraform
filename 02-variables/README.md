@@ -1,8 +1,8 @@
-# Variables in Terraform
+# Module 4.2 Variables in Terraform
 ## Input variables
 To help organize your code, recommend define Terraform variables in a [variables.tf](variables.tf) file
 ## Override inputs values in a file
-Override environment variable defaults by define values in a [_.tfvars_ file](customer1.tfvars)
+Override environment variable defaults by define values in a .tfvars file
 ```bash
 $ terraform init
 $ terraform apply -var-file="customer1.tfvars"

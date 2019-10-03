@@ -24,13 +24,13 @@ variable "a_bool" {
 variable "a_list" {
   description = "A variable that is a list of string"
   type        = list(string)
-  default     = ["westus2", "westus2"]
+  default     = ["westus2", "westus","eastus"]
 }
 
 variable "a_set" {
   description = "A variable that is a set of string"
   type        = set(string)
-  default     = ["westus2", "westus2"]
+  default     = ["westus2", "westus"]
 }
 
 variable "an_object" {

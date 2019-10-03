@@ -1,3 +1,3 @@
 locals {
-  vnet_name = var.location + "-vnet"
+  vnet_name = join("-",[var.location, "vnet"])
 }

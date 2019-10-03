@@ -31,12 +31,8 @@ $ terraform plan
 $ terraform apply
 ```
 ## Make a change
-Change resource gorup in [main.tf](main.tf)  
+Change resource group in [main.tf](main.tf)  
 ```sh
 $ terraform plan
 $ terraform apply
-```
-## Cleanup
-```sh
-$ terraform destroy
 ```
