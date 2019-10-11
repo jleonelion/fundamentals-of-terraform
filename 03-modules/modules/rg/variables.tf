@@ -3,12 +3,6 @@ variable "name" {
   type = string
 }
 
-variable "location" {
-  description = "Region to create resource group in"
-  type = string
-  default = "westus2"
-}
-
 variable "environment" {
   description = "Promotional environment the resource group is associated with (dev, qa, stage, prod are only acceptable values)"
   type = string
@@ -19,8 +13,15 @@ variable "customerID" {
   type = string
 }
 
+
+variable "location" {
+  description = "(Optional) Region to create resource group in"
+  type = string
+  default = "westus2"
+}
+
 variable "tags" {
-  description = "Tags to add to rg"
+  description = "(Optional) Additional tags to add to rg"
   type = map(string)
   default = {}
 }

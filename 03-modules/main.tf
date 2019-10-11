@@ -1,9 +1,9 @@
 module "rg" {
   source = "./modules/rg"
 
-  name = "terraform-modules"
-  customerID = "CUS-123456"
-  location = "westus2"
+  name        = "terraform-modules"
+  customerID  = "CUS-123456"
+  location    = "westus2"
   environment = "dev"
 }
 
@@ -21,7 +21,7 @@ module "network" {
   location            = module.rg.resource_group.location
   resource_group_name = module.rg.resource_group.name
 
-  allow_ssh_traffic   = "true"
+  allow_ssh_traffic = "true"
 }
 
 module "linuxservers" {
@@ -33,6 +33,6 @@ module "linuxservers" {
 
   vm_os_simple   = "UbuntuServer"
   vnet_subnet_id = module.network.vnet_subnets[0]
-  public_ip_dns = ["modules${random_id.randomId.hex}"]
+  public_ip_dns  = ["modules${random_id.randomId.hex}"]
 }
 
