@@ -3,7 +3,15 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name = var.resource_group_name
+  count = contains(local.valid_envs, var.environment) == true ? 0 : 1
+
+  name     = "${var.name}-rg"
   location = var.location
-  tags = var.tags
+  tags = merge(
+    {
+      Environment = var.environment,
+      CustomerID  = var.customerID
+    },
+    var.tags
+  )
 }

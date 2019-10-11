@@ -1,13 +1,10 @@
-# Configure the provider
-provider "azurerm" {
-  version = "~> 1.0"
-}
-
 module "rg" {
   source = "./modules/rg"
 
-  resource_group_name = "modules-rg"
-  tags                = var.tags
+  name = "terraform-modules"
+  customerID = "CUS-123456"
+  location = "westus2"
+  environment = "development"
 }
 
 resource "random_id" "randomId" {
@@ -25,7 +22,6 @@ module "network" {
   resource_group_name = module.rg.resource_group.name
 
   allow_ssh_traffic   = "true"
-  tags                = var.tags
 }
 
 module "linuxservers" {
@@ -38,6 +34,5 @@ module "linuxservers" {
   vm_os_simple   = "UbuntuServer"
   vnet_subnet_id = module.network.vnet_subnets[0]
   public_ip_dns = ["modules${random_id.randomId.hex}"]
-  tags           = var.tags
 }
 
