@@ -24,7 +24,7 @@ module "network" {
   allow_ssh_traffic = "true"
 }
 
-module "linuxservers" {
+module "compute" {
   source  = "Azure/compute/azurerm"
   version = "1.3.0"
 
