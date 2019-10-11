@@ -4,7 +4,7 @@ module "rg" {
   name = "terraform-modules"
   customerID = "CUS-123456"
   location = "westus2"
-  environment = "development"
+  environment = "dev"
 }
 
 resource "random_id" "randomId" {
