@@ -6,7 +6,7 @@ Command
   $0
 Arguments
   --port                   : Port to listen for HTTP requests (default: 80)
-  --dns_nam     [Required] : FQDN by which website will be accessed
+  --dns_name     [Required] : FQDN by which website will be accessed
 
 EOF
 }
