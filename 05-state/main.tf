@@ -9,5 +9,5 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rg" {
   name     = "statedemo-rg"
-  location = "southcentralus"
+  location = "centralus"
 }
