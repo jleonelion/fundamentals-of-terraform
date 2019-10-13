@@ -131,4 +131,9 @@ resource "azurerm_virtual_machine" "vm" {
       "/tmp/setup.sh --port ${var.webserver.port} --dns_name ${azurerm_public_ip.pip.fqdn}",
     ]
   }
+  #execute a command on the system running Terraform when the server id destroyed
+  provisioner "local-exec" {
+    when    = "destroy"
+    command = "echo 'Destroy-time provisioner'"
+  }
 }
