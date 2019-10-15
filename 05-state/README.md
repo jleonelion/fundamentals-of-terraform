@@ -12,11 +12,12 @@ Look in `bootstrap/.terraform`
 
 ### Update variables to point to new storage
 1. Update `setenv` script to set ARM_ACCESS_KEY environment variable
-1. Update `storage_account_name` and `container_name` in [variables.tf](variables.tf)
+1. Update `storage_account_name` and `container_name` in [main.tf](main.tf)
 
 ## Using remote backend
 ```bash 
 $ cd ..
+$ source ../resources/setenv.sh
 $ terraform init -backend-config="dev.tfvars"
 $ terraform plan -var-file="dev.tfvars"
 $ terraform apply -var-file="dev.tfvars"
