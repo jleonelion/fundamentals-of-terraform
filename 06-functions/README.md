@@ -3,6 +3,7 @@
 
 ```shell script
 $ terraform console
+> max(5, 12, 9)
 > file("example.json")
 > jsondecode(file("example.json"))
 > length(jsondecode(file("example.json")))
