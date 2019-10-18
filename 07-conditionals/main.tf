@@ -16,7 +16,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_container_group" "containergroup" {
-  for_each = var.customers
+  for_each            = var.customers
   name                = "container"
   resource_group_name = azurerm_resource_group.rg[each.key].name
   location            = azurerm_resource_group.rg[each.key].location
@@ -31,20 +31,20 @@ resource "azurerm_container_group" "containergroup" {
     memory = "1.5"
 
     ports {
-      port     = 443
+      port     = 80
       protocol = "TCP"
     }
   }
 }
 
 resource "azurerm_resource_group" "nocustomersrg" {
-  count = length(var.customers) > 0 ? 0 : 1
+  count    = length(var.customers) > 0 ? 0 : 1
   name     = "nocustomers-rg"
   location = "eastus"
 }
 
 resource "azurerm_container_group" "nocustomerscontainergroup" {
-  count = length(var.customers) > 0 ? 0 : 1
+  count               = length(var.customers) > 0 ? 0 : 1
   name                = "container"
   resource_group_name = azurerm_resource_group.nocustomersrg[0].name
   location            = azurerm_resource_group.nocustomersrg[0].location
