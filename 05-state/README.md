@@ -1,4 +1,4 @@
-# Terraform state file
+# Module 8 - State Management
 [Terraform state file documentation](https://www.terraform.io/docs/state/index.html)
 ## Bootstrapping the remote backend
 ```bash 

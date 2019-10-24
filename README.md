@@ -16,5 +16,9 @@ Module 8        | [05-state](./05-state)
 Module 9        | [06-functions](./06-functions)
 Module 10       | [07-conditionals](./07-conditionals)
 
-
+## Additional Resources
+* [Official Terraform Documentation](https://www.terraform.io/docs/index.html)
+* [Terraform GitHub](https://github.com/hashicorp/terraform)
+* [Gruntwork - A Comprehensive Guide to Terraform](https://blog.gruntwork.io/a-comprehensive-guide-to-terraform-b3d32832baca)
+* [Terraform: Up & Running, 2nd Edition](http://shop.oreilly.com/product/0636920225010.do)
 

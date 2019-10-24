@@ -1,4 +1,4 @@
-# Functions
+# Module 9 - Functions
 [Terraform Functions Documentation](https://www.terraform.io/docs/configuration/functions.html)
 
 ```shell script

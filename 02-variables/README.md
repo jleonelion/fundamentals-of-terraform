@@ -1,4 +1,4 @@
-# Module 4.2 Variables in Terraform
+# Module 5 - Variables
 ## Input variables
 To help organize your code, recommend define Terraform variables in a [variables.tf](variables.tf) file
 ## Override inputs values in a file

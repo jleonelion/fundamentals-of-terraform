@@ -1,4 +1,4 @@
-# Module 4.1 - Basics
+# Module 4 - Basics
 ## A simple Terraform file
 Examine [main.tf](main.tf)  
 

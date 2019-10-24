@@ -1,4 +1,4 @@
-# Modules
+# Module 6 - Modules
 ## Local Modules
 * Create directory to hold custom module, like our [local module](./modules/rg)
 * Reference module through relative path as in [main.tf](modules/rg/main.tf)

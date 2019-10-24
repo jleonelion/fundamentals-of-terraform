@@ -1,4 +1,4 @@
-# Conditionals and Loops
+# Module 10 - Conditionals and Loops
 ## Foreach
 `each.value` `each.key`
 ## For
